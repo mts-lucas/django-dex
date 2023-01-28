@@ -24,94 +24,11 @@
     --color-gray-9: #191919;
 
     --font-primary: sans-serif;
-    --font-pkm: 'Omega Ruby', sans-serif;
+    /* --font-pkm: 'Omega Ruby', sans-serif; */
     --font-headings: 'Roboto Slab', serif;
 
     --spacing-gutter-medium: 3rem;
     --spacing-gutter-large: 4rem;
-}
-
-* {
-
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-.normal {
-    background-color: #a6a877;
-}
-
-.grass {
-    background-color: #77c850;
-}
-
-.fire {
-    background-color: #ee7f30;
-}
-
-.water {
-    background-color: #678fee;
-}
-
-.electric {
-    background-color: #f7cf2e;
-}
-
-.ice {
-    background-color: #98d5d7;
-}
-
-.ground {
-    background-color: #dfbf69;
-}
-
-.flying {
-    background-color: #a98ff0;
-}
-
-.poison {
-    background-color: #a040a0;
-}
-
-.fighting {
-    background-color: #bf3029;
-}
-
-.psychic {
-    background-color: #f65687;
-}
-
-.dark {
-    background-color: #725847;
-}
-
-.rock {
-    background-color: #b8a137;
-}
-
-.bug {
-    background-color: #a8b720;
-}
-
-.ghost {
-    background-color: #6e5896;
-}
-
-.steel {
-    background-color: #b9b7cf;
-}
-
-.dragon {
-    background-color: #6f38f6;
-}
-
-.fairy {
-    background-color: #f9aec7;
 }
 
 h1,
@@ -121,7 +38,7 @@ h4,
 h5,
 h6 {
 
-    font-family: var(--font-pkm);
+    font-family: var(--font-headings);
 }
 
 .container {
@@ -134,8 +51,11 @@ h6 {
 .main-header-container {
 
     background: var(--color-primary-red);
-    padding: 0;
-    border: none;
+}
+
+.main-logo img{
+
+    max-width: 100%;
 }
 
 .main-logo {
@@ -149,12 +69,4 @@ h6 {
     justify-content: center;
     width: fit-content;
     margin: 0 auto;
-}
-
-.main-logo img{
-
-    object-fit: cover;
-    width: 8%;
-    height: 8%;
-    margin-right: 1rem;
 }
