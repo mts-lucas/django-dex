@@ -170,7 +170,12 @@ h6 {
     margin-right: 1rem;
 }
 
+.main-content-container {
 
+    margin: 30px 30px 30px 30px;
+    background: var(--color-white);
+    border-radius: 1rem;
+}
 
 .main-footer {
     display: flex;
