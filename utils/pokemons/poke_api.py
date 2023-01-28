@@ -1,18 +1,29 @@
-# import json
-
 import requests
 
 
+def requestUrl(pokemonDict):
+
+    pkmUrl = pokemonDict['url']
+
+    return pkmUrl
+
+
 def pokeApi(offset=0, limit=25):
-    # requisição
+
     r = requests.get(
         f'https://pokeapi.co/api/v2/pokemon?offset={offset}&limit={limit}')
 
-    # tranformando o json em dict
     data = r.json()
 
-    # tranformando a chave results em uma lista de dicionarios(name, url)
-    pokemonList = data['results']
+    pokemonDict = data['results']
+
+    pokemonList = list(map(requestUrl, pokemonDict))
 
     return pokemonList
+
+
+# class Pokemon():
+#     def __init__(self, pokemonListItem):
+#         self.url = pokemonListItem[url]
+
 
