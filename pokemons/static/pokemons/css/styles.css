@@ -42,8 +42,19 @@ html {
     font-size: 62.5%;
 }
 
+body {
+
+    background: var(--color-gray-7);
+}
+
+html, body {
+    min-height: 100%;
+}
+
+
+
 .normal {
-    background-color: #a6a877;
+    background-color: #959595;
 }
 
 .grass {
@@ -157,4 +168,31 @@ h6 {
     width: 8%;
     height: 8%;
     margin-right: 1rem;
+}
+
+
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-gray-9);
+    color: var(--color-white);
+    padding: var(--spacing-gutter-large);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* margin-top: 100%; */
+    
+}
+
+.main-footer a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+    font-family: var(--font-headings);
+}
+
+.main-footer a:hover {
+    filter: brightness(.8);
 }
