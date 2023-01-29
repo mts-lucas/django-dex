@@ -22,8 +22,13 @@ def pokeApi(offset=0, limit=25):
     return pokemonList
 
 
-# class Pokemon():
-#     def __init__(self, pokemonListItem):
-#         self.url = pokemonListItem[url]
-
-
+class Pokemon():
+    def __init__(self):
+        self.id = None
+        self.name = None
+        self.type = None
+        self.types = None
+        self.height = None
+        self.width = None
+        self.photo = None
+        self.stats = None
