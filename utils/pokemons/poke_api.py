@@ -23,7 +23,8 @@ def pokeApi(offset=0, limit=25):
 
 
 class Pokemon():
-    def __init__(self):
+    def __init__(self, pokemonurl):
+        self.url = pokemonurl
         self.id = None
         self.name = None
         self.types = None
@@ -57,9 +58,9 @@ class Pokemon():
 
         return pokemonSprite
 
-    def getPokemonDetail(self, pokemonurl):
+    def getPokemonDetail(self):
 
-        r = requests.get(pokemonurl)
+        r = requests.get(self.url)
 
         pokemonData = r.json()
 
@@ -71,3 +72,18 @@ class Pokemon():
         self.weight = pokemonData['weight']
         self.photo = self.getSprite(pokemonData)
         self.stats = self.getStats(pokemonData)
+
+
+def getListPokemon(offset, limit):
+
+    pokemonUrlList = pokeApi(offset, limit)
+
+    pokemonList = []
+
+    for pokemonItem in pokemonUrlList:
+
+        newPokemon = Pokemon(pokemonItem)
+        newPokemon.getPokemonDetail()
+        pokemonList.append(newPokemon)
+
+    return pokemonList
