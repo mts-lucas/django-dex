@@ -74,7 +74,11 @@ class Pokemon():
         self.stats = self.getStats(pokemonData)
 
 
-def getListPokemon(offset, limit):
+def getListPokemon(offset=0, limit=25):
+
+    if limit > 1008:
+        offset = 1008
+        limit: 0
 
     pokemonUrlList = pokeApi(offset, limit)
 
