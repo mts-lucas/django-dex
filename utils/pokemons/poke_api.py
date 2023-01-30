@@ -32,3 +32,13 @@ class Pokemon():
         self.width = None
         self.photo = None
         self.stats = None
+
+    def getStats(self, pokemonjson):
+        statsDict = pokemonjson['stats']
+        newStatsDict = {}
+        for status in statsDict:
+            statusName = status['stat']['name']
+            statusNumber = status['base_stat']
+            newStatsDict[statusName] = statusNumber
+
+        self.stats = newStatsDict
