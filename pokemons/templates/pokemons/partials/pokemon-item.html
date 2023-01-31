@@ -1,9 +1,18 @@
 <li class="pokemon {{item.type}}">
 
-    <span class="number">#{{item.id}}</span>
-    <span class="name">{{item.name}}</span>
+    <div class="infos">
+
+        <img src="{{item.photo}}" alt="{{item.name}}">
+
+    </div>
 
     <div class="detail">
+
+        <div class="identify">
+            <span class="number">#{{item.id}}</span>
+            <span class="name">{{item.name}}</span>
+        </div>
+
         <ol class="types">
 
             {% for tipo in item.types %}
@@ -13,8 +22,6 @@
             {% endfor %}
 
         </ol>
-
-        <img src="{{item.photo}}" alt="{{item.name}}">
 
     </div>
 </li>

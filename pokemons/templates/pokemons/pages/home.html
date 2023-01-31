@@ -1,12 +1,16 @@
 {% extends 'global/base.html' %}
 {% block tittle %}DJANGO-DEX{% endblock tittle %}
 
-<ol id="pokemonList" class="pokemons">
+{% block content %}
 
-    <!-- pokemons here -->
+    <ol id="pokemonList" class="pokemons">
 
-    {% for item in pokemonItens %}
-        {% include 'pokemons/partials/pokemon-item.html' %}
-    {% endfor %}
-    
-</ol>
+        <!-- pokemons here -->
+
+        {% for item in pokemonItens %}
+            {% include 'pokemons/partials/pokemon-item.html' %}
+        {% endfor %}
+        
+    </ol>
+
+{% endblock content %}
