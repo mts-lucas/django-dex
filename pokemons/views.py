@@ -8,7 +8,7 @@ from utils.pokemons.poke_api import getListPokemon
 def home(request):
     return render(request, 'pokemons/pages/home.html', context={
 
-        'pokemonItens': getListPokemon(0, 3)
+        'pokemonItens': getListPokemon(0, 10)
     })
 
 
