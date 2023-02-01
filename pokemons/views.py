@@ -10,7 +10,3 @@ def home(request):
 
         'pokemonItens': getListPokemon(0, 151)
     })
-
-
-def pokemon(request):
-    return render(request, 'pokemons/pages/pokemon-view.html')
