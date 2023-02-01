@@ -147,6 +147,8 @@ h6 {
     background: var(--color-primary-red);
     padding: 0;
     border: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .main-logo {
@@ -174,7 +176,7 @@ h6 {
 
     margin: 30px 30px 30px 30px;
     background: var(--color-white);
-    border-radius: 1rem;
+    border-radius: 5rem;
     padding: 1rem;
 }
 
@@ -217,6 +219,7 @@ h6 {
     padding-left: 1rem;
     border-radius: 8rem 8rem 8rem 8rem;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, .5);
+    font-size: 1.2rem;
 }
 
 .pokemon .infos img{
@@ -241,10 +244,20 @@ h6 {
 .pokemon .detail .identify {
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     text-align: start;
+    /* font-size: 1.2; */
     
+}
+
+.pokemon .detail .identify .number{
+
+    color: black;
+    opacity: .8;
+    text-align: right;
+    /* padding-left: 1rem; */
+    /* font-size: .8rem; */
 }
 
 .pokemon .detail .identify .name{
@@ -252,7 +265,34 @@ h6 {
     color: white;
     text-transform: capitalize;
     text-align: start;
+    padding-right: 2rem;
     
+}
+
+.pokemon .detail .types{
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 1rem;
+}
+
+.pokemon .detail .types .type{
+
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem .3rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    filter: brightness(1.1);
+    text-align: center;
+    align-items: flex-start;
 
 }
 
@@ -263,10 +303,8 @@ h6 {
     background: var(--color-gray-9);
     color: var(--color-white);
     padding: var(--spacing-gutter-large);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* margin-top: 100%; */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     
 }
 
