@@ -33,6 +33,10 @@ class Pokemon():
         self.width = None
         self.photo = None
         self.stats = None
+        # adicionar abilidades (com um model abilidades)
+        # talvez moves mais futuramente
+        # adicionar evolucoes usando o pokemon-species/id
+        # adicionar evolucoes usando o pokemon-species/id
 
     def getStats(self, pokemonjson):
         statsDict = pokemonjson['stats']
