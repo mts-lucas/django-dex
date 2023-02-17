@@ -22,7 +22,7 @@ def pokeApi(offset=0, limit=25):
     return pokemonList
 
 
-class Pokemon():
+class PokemonClasse():
     def __init__(self, pokemonurl):
         self.url = pokemonurl
         self.id = None
@@ -90,7 +90,7 @@ def getListPokemon(offset=0, limit=25):
 
     for pokemonItem in pokemonUrlList:
 
-        newPokemon = Pokemon(pokemonItem)
+        newPokemon = PokemonClasse(pokemonItem)
         newPokemon.getPokemonDetail()
         pokemonList.append(newPokemon)
 

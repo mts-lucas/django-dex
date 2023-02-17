@@ -10,6 +10,13 @@ class PkmType(models.Model):
         return self.name
 
 
+class PkmAbility(models.Model):
+    name = models.CharField(max_length=35)
+
+    def __str__(self):
+        return self.name
+
+
 class Pokemon(models.Model):
 
     number = models.IntegerField()
