@@ -8,7 +8,7 @@ def requestUrl(pokemonDict):
     return pkmUrl
 
 
-def pokeApi(offset=0, limit=25):
+def pokeApi(offset=0, limit=809):
 
     r = requests.get(
         f'https://pokeapi.co/api/v2/pokemon?offset={offset}&limit={limit}')
@@ -33,10 +33,11 @@ class PokemonClasse():
         self.width = None
         self.photo = None
         self.stats = None
+        self.abilities = None
+        self.evolution_chain_number = None
         # adicionar abilidades (com um model abilidades)
-        # talvez moves mais futuramente
         # adicionar evolucoes usando o pokemon-species/id
-        # adicionar evolucoes usando o pokemon-species/id
+        # evolution-chain/429
 
     def getStats(self, pokemonjson):
         statsDict = pokemonjson['stats']
@@ -61,6 +62,12 @@ class PokemonClasse():
         pokemonSprite = spritesDict['official-artwork']['front_default']
 
         return pokemonSprite
+
+    def getAbilities(self, pokemonjson):
+        pass
+
+    def getEvolutionChain(self, pokemonjson):
+        pass
 
     def getPokemonDetail(self):
 

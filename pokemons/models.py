@@ -17,11 +17,26 @@ class PkmAbility(models.Model):
         return self.name
 
 
+class Evolutions(models.Model):
+    number = models.IntegerField()
+    first_form = models.CharField(max_length=65)
+
+    def __str__(self):
+
+        return self.first_form
+
+
 class Pokemon(models.Model):
 
     number = models.IntegerField()
     name = models.CharField(max_length=65)
     picture = models.URLField()
+    evolution_chain_number = models.ForeignKey(
+        Evolutions,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        default=None,)
     #  physical attributes
     height = models.IntegerField()
     width = models.IntegerField()
