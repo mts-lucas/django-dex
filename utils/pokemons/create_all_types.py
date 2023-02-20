@@ -2,7 +2,7 @@
 
 from pokemons.models import PkmType
 
-from utils.pokemons.poke_api_types import pokeApiType
+from utils.pokemons.poke_api_types import pokeApiType       # noqa: F401 E501
 
 tiposList = pokeApiType()
 

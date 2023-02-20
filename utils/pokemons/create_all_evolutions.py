@@ -1,6 +1,7 @@
-from pokemons.models import Evolutions
+# script rodado no shell para adicionar todos os objetos no banco de dados
 
-from utils.pokemons.poke_api_evolutions import Evo, pokeApiEvolution
+from pokemons.models import Evolutions
+from utils.pokemons.poke_api_evolutions import Evo, pokeApiEvolution        # noqa: F401 E501
 
 evosList = pokeApiEvolution()
 
