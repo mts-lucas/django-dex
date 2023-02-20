@@ -16,7 +16,7 @@ def pokeApiEvolution():
     evoList = []
 
     r = requests.get(
-        'https://pokeapi.co/api/v2/evolution-chain?offset=0&limit=528')
+        'https://pokeapi.co/api/v2/evolution-chain?offset=0&limit=429')
 
     dataurl = r.json()
 
@@ -37,5 +37,6 @@ def pokeApiEvolution():
         name = especie['name']
 
         evoList.append(Evo(number=numero, name=name))
+        print(numero)
 
     return evoList
