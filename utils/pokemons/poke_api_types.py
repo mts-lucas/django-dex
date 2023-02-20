@@ -15,8 +15,3 @@ def pokeApiType():
         typesList.append(tipo['name'])
 
     return typesList
-
-
-teste = pokeApiType()
-
-print(teste)
