@@ -47,7 +47,7 @@ class Pokemon(models.Model):
         default=None,)
     #  physical attributes
     height = models.IntegerField()
-    width = models.IntegerField()
+    weight = models.IntegerField()
     #  status base
     hp = models.IntegerField()
     attack = models.IntegerField()
@@ -63,6 +63,20 @@ class Pokemon(models.Model):
         blank=False,
         default=None,)
     color_type = models.CharField(max_length=35)
+
+    abilities = models.ForeignKey(
+        PkmAbility,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        default=None,)
+
+    generation = models.ForeignKey(
+        Generation,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        default=None,)
 
     def __str__(self):
 
