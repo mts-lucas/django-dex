@@ -35,7 +35,7 @@ class PokemonClasse():
         self.stats = None
         self.abilities = None
         self.evolution_chain_number = None
-        # adicionar evolucoes usando o pokemon-species/id
+        self.generation = None
         # evolution-chain/429
 
     def getStats(self, pokemonjson):
@@ -95,6 +95,13 @@ class PokemonClasse():
         self.weight = pokemonData['weight']
         self.photo = self.getSprite(pokemonData)
         self.stats = self.getStats(pokemonData)
+
+    def getGeneration(self, pokemonjson):
+        specieUrl = pokemonjson['species']['url']
+        r = requests.get(specieUrl)
+        data = r.json()
+        gen = data['generation']['name']
+        return gen
 
 
 def getListPokemon(offset=0, limit=25):
