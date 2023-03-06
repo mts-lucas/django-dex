@@ -81,6 +81,13 @@ class PokemonClasse():
         evoNumber = data2['id']
         return evoNumber
 
+    def getGeneration(self, pokemonjson):
+        specieUrl = pokemonjson['species']['url']
+        r = requests.get(specieUrl)
+        data = r.json()
+        gen = data['generation']['name']
+        return gen
+
     def getPokemonDetail(self):
 
         r = requests.get(self.url)
@@ -95,20 +102,12 @@ class PokemonClasse():
         self.weight = pokemonData['weight']
         self.photo = self.getSprite(pokemonData)
         self.stats = self.getStats(pokemonData)
-
-    def getGeneration(self, pokemonjson):
-        specieUrl = pokemonjson['species']['url']
-        r = requests.get(specieUrl)
-        data = r.json()
-        gen = data['generation']['name']
-        return gen
+        self.generation = self.getGeneration(pokemonData)
+        self.abilities = self.getAbilities(pokemonData)
+        self.evolution_chain_number = self.getEvolutionChain(pokemonData)
 
 
-def getListPokemon(offset=0, limit=25):
-
-    if limit > 1008:
-        offset = 1008
-        limit: 0
+def getListPokemon(offset=0, limit=809):
 
     pokemonUrlList = pokeApi(offset, limit)
 
