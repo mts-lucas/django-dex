@@ -106,6 +106,10 @@ class PokemonClasse():
         self.abilities = self.getAbilities(pokemonData)
         self.evolution_chain_number = self.getEvolutionChain(pokemonData)
 
+    def __str__(self):
+
+        return str(self.id)
+
 
 def getListPokemon(offset=0, limit=809):
 
@@ -118,5 +122,6 @@ def getListPokemon(offset=0, limit=809):
         newPokemon = PokemonClasse(pokemonItem)
         newPokemon.getPokemonDetail()
         pokemonList.append(newPokemon)
+        print(f'{newPokemon} is OK')
 
     return pokemonList

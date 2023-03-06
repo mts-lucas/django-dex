@@ -58,7 +58,6 @@ class Pokemon(models.Model):
     #  pokemon types
     pkm_types = models.ManyToManyField(PkmType)
     color_type = models.CharField(max_length=35)
-
     abilities = models.ManyToManyField(PkmAbility)
 
     generation = models.ForeignKey(

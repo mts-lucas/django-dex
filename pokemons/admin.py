@@ -24,6 +24,7 @@ class PkmTypeAdmin(admin.ModelAdmin):
 class EvolutionsAdmin(admin.ModelAdmin):
     ...
 
+
 @admin.register(Pokemon)
 class PokemonAdmin(admin.ModelAdmin):
-    ...
+    filter_horizontal = ('pkm_types', 'abilities',)
