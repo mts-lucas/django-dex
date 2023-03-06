@@ -64,7 +64,12 @@ class PokemonClasse():
         return pokemonSprite
 
     def getAbilities(self, pokemonjson):
-        pass
+        abilitiesDict = pokemonjson['abilities']
+        abltList = []
+        for ablty in abilitiesDict:
+            abilityN = ablty['ability']
+            ability = abilityN['name']
+            abltList.append(ability)
 
     def getEvolutionChain(self, pokemonjson):
         pass
