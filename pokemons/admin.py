@@ -1,8 +1,13 @@
 from django.contrib import admin
 
-from .models import Evolutions, PkmAbility, PkmType
+from .models import Evolutions, Generation, PkmAbility, PkmType
 
 # Register your models here.
+
+
+@admin.register(Generation)
+class GenerationAdmin(admin.ModelAdmin):
+    ...
 
 
 @admin.register(PkmAbility)
