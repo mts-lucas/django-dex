@@ -35,7 +35,6 @@ class PokemonClasse():
         self.stats = None
         self.abilities = None
         self.evolution_chain_number = None
-        # adicionar abilidades (com um model abilidades)
         # adicionar evolucoes usando o pokemon-species/id
         # evolution-chain/429
 
@@ -70,9 +69,17 @@ class PokemonClasse():
             abilityN = ablty['ability']
             ability = abilityN['name']
             abltList.append(ability)
+        return abltList
 
     def getEvolutionChain(self, pokemonjson):
-        pass
+        specieUrl = pokemonjson['species']['url']
+        r = requests.get(specieUrl)
+        data = r.json()
+        urlEvo = data['evolution_chain']['url']
+        r2 = requests.get(urlEvo)
+        data2 = r2.json()
+        evoNumber = data2['id']
+        return evoNumber
 
     def getPokemonDetail(self):
 
