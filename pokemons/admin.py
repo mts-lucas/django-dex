@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Evolutions, Generation, PkmAbility, PkmType
+from .models import Evolutions, Generation, PkmAbility, PkmType, Pokemon
 
 # Register your models here.
 
@@ -22,4 +22,8 @@ class PkmTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Evolutions)
 class EvolutionsAdmin(admin.ModelAdmin):
+    ...
+
+@admin.register(Pokemon)
+class PokemonAdmin(admin.ModelAdmin):
     ...

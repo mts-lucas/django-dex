@@ -56,20 +56,10 @@ class Pokemon(models.Model):
     special_defense = models.IntegerField()
     speed = models.IntegerField()
     #  pokemon types
-    pkm_types = models.ForeignKey(
-        PkmType,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False,
-        default=None,)
+    pkm_types = models.ManyToManyField(PkmType)
     color_type = models.CharField(max_length=35)
 
-    abilities = models.ForeignKey(
-        PkmAbility,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False,
-        default=None,)
+    abilities = models.ManyToManyField(PkmAbility)
 
     generation = models.ForeignKey(
         Generation,
