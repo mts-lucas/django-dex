@@ -135,6 +135,58 @@ h6 {
     font-family: var(--font-pkm);
 }
 
+.search-form {
+
+    border: .2rem solid var(--color-primary-dark);
+    max-width: 64rem;
+    margin: 0 auto;
+    border-radius: .4rem;
+    position: relative;
+    transition: all 300ms ease-in-out;
+}
+
+.search-input,
+.search-button {
+
+    border: none;
+    background: var(--color-gray-0);
+    outline: none;
+    padding: 1rem;
+    transition: all 300ms ease-in-out;
+}
+
+.search-button {
+
+    /* buscar ficar na borda direita do pai */
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.search-input {
+
+    width: 100%;
+    padding-right: 3rem;
+}
+
+.search-button:focus {
+
+    outline: 1px solid var(--color-primary);
+    background: rgba(0, 0, 0, .2);
+}
+
+.search-form:focus-within {
+
+    border-color: var(--color-primary);
+    background: var(--color-white);
+}
+
+.search-form:focus-within .search-button {
+
+    color: var(--color-primary);
+}
+
 .container {
 
     max-width: 144rem;
@@ -318,4 +370,12 @@ h6 {
 .main-footer a:hover {
     filter: brightness(.8);
 }
+
+.center {
+    text-align: center;
+  }
+  
+  .m-x {
+    margin: 0 var(--spacing-gutter-medium);
+  }
 

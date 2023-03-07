@@ -6,4 +6,5 @@ app_name = 'pokemons'
 
 urlpatterns = [
     path('', views.home, name="home"),
+    path('search', views.search_results, name="search_results"),
 ]

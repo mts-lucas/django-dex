@@ -1,0 +1,23 @@
+{% extends 'global/base.html' %}
+{% block tittle %}DJANGO-DEX{% endblock tittle %}
+
+{% block content %}
+
+    <ol id="pokemonList" class="pokemons">
+
+        {% for result in results %}
+            {% include 'pokemons/partials/pokemon-item.html' %}
+        
+        {% empty %}
+
+            <div class="center m-x">
+
+                <h1>Pokemon not Found</h1>
+                
+            </div>
+
+        {% endfor %}
+        
+    </ol>
+
+{% endblock content %}

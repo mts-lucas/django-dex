@@ -1,8 +1,8 @@
 <div class="search-container">
     <div class="container">
-        <form method="get" action="" class="search-form">
+        <form method="get" action="{% url 'pokemons:search_results' %}" class="search-form">
 
-            <input type="search" name="search" class="search-input">
+            <input type="search" name="query" class="search-input">
             <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
 
         </form>
