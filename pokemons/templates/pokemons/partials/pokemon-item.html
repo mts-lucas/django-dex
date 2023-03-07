@@ -1,8 +1,8 @@
-<li class="pokemon {{item.type}}">
+<li class="pokemon {{item.color_type}}">
 
     <div class="infos">
 
-        <img src="{{item.photo}}" alt="{{item.name}}">
+        <img src="{{item.picture}}" alt="{{item.name}}">
 
     </div>
 
@@ -11,13 +11,13 @@
         <div class="identify">
             
             <span class="name">{{item.name}}</span>
-            <span class="number">#{{item.id}}</span>
+            <span class="number">#{{item.number}}</span>
             
         </div>
 
         <ol class="types">
 
-            {% for tipo in item.types %}
+            {% for tipo in item.pkm_types.all %}
 
                 <li class="type {{tipo}}">{{tipo}}</li>
             
