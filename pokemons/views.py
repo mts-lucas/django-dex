@@ -16,7 +16,7 @@ def home(request):
 
 def add_poke(request):
     if request.method == 'POST':
-        pkmlist = getListPokemon()
+        pkmlist = getListPokemon(700, 109)
 
         for poke in pkmlist:
 
