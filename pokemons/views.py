@@ -13,3 +13,10 @@ def home(request):
 
         'pokemonItens': pkmList,
     })
+
+
+def search_results(request):
+    if request.method == 'GET':
+        query = request.GET.get('query')
+        results = Pokemon.objects.filter(name__icontains=query)
+        return render(request, 'search_results.html', {'results': results})
