@@ -46,5 +46,5 @@ def pkm_type(request, name):
     return render(request, 'pokemons/pages/tipos.html', context={
 
         'pokemonItens': pkmList,
-        'tittle': title,
+        'title': title,
     })
