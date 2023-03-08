@@ -48,3 +48,29 @@ def pkm_type(request, name):
         'pokemonItens': pkmList,
         'title': title,
     })
+
+
+def ability(request, name):
+
+    pkmList = get_list_or_404(
+        Pokemon.objects.filter(
+            abilities__name__icontains=name
+        ).order_by('number'))
+
+    title = ''
+    for pokemon in pkmList:
+        for pkm_ab in pokemon.abilities.all():
+            if pkm_ab.name.lower() == name.lower():
+                title = pkm_ab.name
+                break
+        if title:
+            break
+
+    if not title and pkmList:
+        title = "NotFound"
+
+    return render(request, 'pokemons/pages/ability.html', context={
+
+        'pokemonItens': pkmList,
+        'title': title,
+    })
