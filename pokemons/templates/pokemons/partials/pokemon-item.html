@@ -10,7 +10,7 @@
 
         <div class="identify">
             
-            <span class="name">{{item.name}}</span>
+            <span class="name" >{{item.name}}</span>
             <span class="number">#{{item.number}}</span>
             
         </div>
@@ -19,7 +19,9 @@
 
             {% for tipo in item.pkm_types.all %}
 
-                <li class="type {{tipo}}">{{tipo}}</li>
+                <li class="type {{tipo}}">
+                    <a href="{% url 'pokemons:tipo' tipo %}">{{tipo}}</a>
+                </li>
             
             {% endfor %}
 

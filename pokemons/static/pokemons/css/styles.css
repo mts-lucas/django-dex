@@ -345,8 +345,16 @@ h6 {
     filter: brightness(1.1);
     text-align: center;
     align-items: flex-start;
+    
 
 }
+
+.pokemon .detail .types .type a{
+
+    color: white;
+    text-decoration: none;
+}
+
 
 .main-footer {
     display: flex;
