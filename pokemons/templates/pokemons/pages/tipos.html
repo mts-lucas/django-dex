@@ -1,0 +1,16 @@
+{% extends 'global/base.html' %}
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+
+    <ol id="pokemonList" class="pokemons">
+
+        <!-- pokemons here -->
+
+        {% for item in pokemonItens %}
+            {% include 'pokemons/partials/pokemon-item.html' %}
+        {% endfor %}
+        
+    </ol>
+
+{% endblock content %}
