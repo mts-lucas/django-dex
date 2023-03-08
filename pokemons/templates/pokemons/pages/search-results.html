@@ -5,7 +5,8 @@
 
     <ol id="pokemonList" class="pokemons">
 
-        {% for result in results %}
+        {% for item in results %}
+
             {% include 'pokemons/partials/pokemon-item.html' %}
         
         {% empty %}

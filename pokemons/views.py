@@ -19,4 +19,6 @@ def search_results(request):
     if request.method == 'GET':
         query = request.GET.get('query')
         results = Pokemon.objects.filter(name__icontains=query)
-        return render(request, 'search_results.html', {'results': results})
+    return render(request, 'pokemons/pages/search-results.html', context={
+        'results': results,
+    })
