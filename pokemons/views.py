@@ -74,3 +74,28 @@ def ability(request, name):
         'pokemonItens': pkmList,
         'title': title,
     })
+
+
+def generation(request, name):
+
+    pkmList = get_list_or_404(
+        Pokemon.objects.filter(
+            generation__name__icontains=name
+        ).order_by('number'))
+
+    title = ''
+    for pokemon in pkmList:
+        if pokemon.generation.name == name.lower():
+            title = pokemon.generation.name
+            break
+        if title:
+            break
+
+    if not title and pkmList:
+        title = "NotFound"
+
+    return render(request, 'pokemons/pages/generation.html', context={
+
+        'pokemonItens': pkmList,
+        'title': title,
+    })
