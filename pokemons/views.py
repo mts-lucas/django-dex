@@ -1,4 +1,4 @@
-from django.shortcuts import get_list_or_404, render
+from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from .models import Pokemon
 
@@ -98,4 +98,14 @@ def generation(request, name):
 
         'pokemonItens': pkmList,
         'title': title,
+    })
+
+
+def recipe(request, number):
+    pkm = get_object_or_404(Pokemon, number=number)
+
+    return render(request, 'pokemons/pages/pokemon-view.html', context={
+
+        'pkm': pkm,
+        'title': pkm.name,
     })
