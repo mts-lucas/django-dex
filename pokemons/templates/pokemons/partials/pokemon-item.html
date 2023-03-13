@@ -10,7 +10,7 @@
 
         <div class="identify">
             
-            <span class="name" >{{item.name}}</span>
+            <a href="{% url 'pokemons:pokemon' item.number %}"  class="name" >{{item.name}}</a>
             <span class="number">#{{item.number|stringformat:"03d"}}</span>
             
         </div>
