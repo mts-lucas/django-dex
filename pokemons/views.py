@@ -101,7 +101,7 @@ def generation(request, name):
     })
 
 
-def recipe(request, number):
+def pokemon(request, number):
     pkm = get_object_or_404(Pokemon, number=number)
 
     return render(request, 'pokemons/pages/pokemon-view.html', context={
