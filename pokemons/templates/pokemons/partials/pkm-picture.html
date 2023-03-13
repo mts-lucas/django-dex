@@ -1,15 +1,32 @@
 <div class="container {{pkm.color_type}}">
 
-    <div class="name-container container {{pkm.color_type}}">
+    <div class="number-container container">
 
-        <h1>{{ pkm.name }}</h1>
-        
+        <p>{{ pkm.number }}</p>
+
+        </ol>
+
     </div>
 
-    <div class="container picture-container {{pkm.color_type}}">
+    <div class="name-container container">
+
+        <p>{{ pkm.name }}</p>
+
+    </div>
+
+    <div class="container picture-container">
 
         <img src="{{pkm.picture}}" alt="{{ pkm.name }}">
+        <ol class="types">
+
+            {% for tipo in pkm.pkm_types.all %}
+
+                <li class="type {{tipo}}">
+                    <a href="{% url 'pokemons:tipo' tipo %}">{{tipo}}</a>
+                </li>
+            
+            {% endfor %}
 
     </div>
-    
+
 </div>
