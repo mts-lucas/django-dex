@@ -2,7 +2,8 @@
 
     <div class="number-container container">
 
-        <p>{{ pkm.number }}</p>
+        <p class="number">{{ pkm.number|stringformat:"03d" }}</p>
+        <p class="gen">{{ pkm.generation }}</p>
 
         </ol>
 
