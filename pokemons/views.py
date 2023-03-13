@@ -28,7 +28,7 @@ def pkm_type(request, name):
 
     pkmList = get_list_or_404(
         Pokemon.objects.filter(
-            pkm_types__name__icontains=name
+            pkm_types__name=name
         ).order_by('number'))
 
     title = ''
@@ -54,7 +54,7 @@ def ability(request, name):
 
     pkmList = get_list_or_404(
         Pokemon.objects.filter(
-            abilities__name__icontains=name
+            abilities__name=name
         ).order_by('number'))
 
     title = ''
@@ -80,7 +80,7 @@ def generation(request, name):
 
     pkmList = get_list_or_404(
         Pokemon.objects.filter(
-            generation__name__icontains=name
+            generation__name=name
         ).order_by('number'))
 
     title = ''

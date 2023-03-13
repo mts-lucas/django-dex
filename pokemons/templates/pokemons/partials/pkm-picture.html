@@ -3,7 +3,7 @@
     <div class="number-container container">
 
         <p class="number">{{ pkm.number|stringformat:"03d" }}</p>
-        <p class="gen">{{ pkm.generation }}</p>
+        <a href="{% url 'pokemons:generation' pkm.generation %}" class="gen">{{ pkm.generation }}</a>
 
         </ol>
 
