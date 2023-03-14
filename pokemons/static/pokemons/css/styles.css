@@ -578,8 +578,60 @@ h6 {
     border-bottom: 1px solid rgba(128, 128, 128, 0.5);
   }
   
-  .table-stat td {
+.table-stat td {
     border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-  }
+}
 
+.evo-container{
 
+    background-color: var(--color-gray-8);
+    border-radius: 5rem;
+    margin: 1.5rem;
+}
+
+.evo-container .titulo p{
+
+    color: var(--color-gray-0);
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.evo-container .evolutions-detail{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: space-between;
+}
+
+.evo-container .evolutions-detail .evo-pkm{
+
+    justify-items: space-between;
+    /* margin: 0 auto; */
+    padding: 0;
+}
+
+.evo-container .evolutions-detail .evo-pkm .evo-picture{
+
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.evo-container .evolutions-detail .evo-pkm .evo-picture .picture-pkm{
+
+    height: 20rem;
+    width: 20rem;
+}
+
+.evo-container .evolutions-detail .evo-pkm .evo-name-number p{
+
+    font-size: 2rem;
+    color: var(--color-gray-0);
+    font-family: var(--font-primary);
+    font-weight: bolder;
+    text-align: center;
+
+}

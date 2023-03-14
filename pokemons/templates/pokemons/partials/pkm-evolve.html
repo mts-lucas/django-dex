@@ -1,0 +1,35 @@
+<div class="container evo-container">
+
+    <div class="titulo">
+
+        <p>Pokemon from this evolution chain:</p>
+
+    </div>
+    
+
+    <div class="evolutions-detail">
+        {% for evo in evos  %}
+    
+            <div class="evo-pkm">
+
+                <div class="evo-picture">
+
+                    <a href="{% url 'pokemons:pokemon' evo.number %}">
+                        <img class="picture-pkm" src="{{evo.picture}}" alt="{{evo.name}}">
+                    </a>
+
+                </div>
+                <div class="evo-name-number">
+
+                    <p class="evo-name">{{evo.name}} Nº {{ evo.number|stringformat:"03d" }}</p>
+
+                </div>
+
+
+            </div>
+    
+        {% endfor %}
+
+    </div>
+
+</div>

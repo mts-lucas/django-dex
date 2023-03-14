@@ -103,9 +103,13 @@ def generation(request, name):
 
 def pokemon(request, number):
     pkm = get_object_or_404(Pokemon, number=number)
+    pkmevo = get_list_or_404(
+        Pokemon,
+        evolution_chain_number=pkm.evolution_chain_number)
 
     return render(request, 'pokemons/pages/pokemon-view.html', context={
 
         'pkm': pkm,
         'title': pkm.name,
+        'evos': pkmevo,
     })
