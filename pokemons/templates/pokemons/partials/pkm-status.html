@@ -1,8 +1,8 @@
 <div class="container stats-container">
 
-    <div class="table-container">
+    <div class="table-stat">
 
-        <table>
+        <table class="table-stat">
             <thead>
     
                 <caption>Base Stats</caption>
@@ -44,7 +44,7 @@
 
     </div>
 
-    <div class="table-container">
+    <div class="table-stat">
 
         <table>
             <thead>
@@ -72,7 +72,7 @@
 
     </div>
     
-    <div class="table-container">
+    <div class="table-stat">
 
         <table>
             <thead>
@@ -80,14 +80,14 @@
                 <caption>Abilities</caption>
     
                 <tr>
-                    <th>Ability</th>
+                    <th></th>
                 </tr>
     
             <tbody>
     
             {% for ability in pkm.abilities.all %}
                 <tr>
-                    <td>{{ability.name}}</td>
+                    <td><a href="{% url 'pokemons:ability' ability.name %}">{{ability.name}}</a></td>
                 </tr>    
             {% endfor %}
     

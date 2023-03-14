@@ -135,6 +135,11 @@ h6 {
     font-family: var(--font-pkm);
 }
 
+.search-container{
+
+    margin-top: 2rem;
+}
+
 .search-form {
 
     border: .2rem solid var(--color-primary-dark);
@@ -522,5 +527,59 @@ h6 {
     color: var(--color-white);
 
 }
+
+.main-content-container .stats-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    background-color:rgba(92, 168, 212, 0.205);
+    border-radius: 5rem;
+    margin: 1.5rem;
+
+
+}
+
+.main-content-container .stats-container .table-stat{
+
+    width: 33.33%;
+    color: var(--color-gray-9);
+    font-size: 1.8rem;
+    font-family: var(--font-primary);
+
+}
+
+.table-stat td a{
+
+    text-decoration: none;
+    color: var(--color-gray-9);
+    font-family: var(--font-primary);
+}
+
+.table-stat table{
+
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 10rem 1px;
+}
+
+.table-stat table caption{
+
+    font-weight: bolder;
+}
+
+.table-stat td, .table-stat th {
+
+    width: 50%;
+    padding: 5px;
+  }
+
+.table-stat th {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  }
+  
+  .table-stat td {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  }
 
 
