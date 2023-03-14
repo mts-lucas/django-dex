@@ -1,89 +1,101 @@
 <div class="container stats-container">
 
-    <table>
-        <thead>
+    <div class="table-container">
 
-            <caption>Base Stats</caption>
+        <table>
+            <thead>
+    
+                <caption>Base Stats</caption>
+    
+                <tr>
+                    <th>statistic</th>
+                    <th>value</th>
+                </tr>
+    
+            <tbody>
+    
+                <tr>
+                    <td>hp</td>
+                    <td>{{pkm.hp}}</td>
+                </tr>
+                <tr>
+                    <td>attack</td>
+                    <td>{{pkm.attack}}</td>        
+                </tr>
+                <tr>
+                    <td>defense</td>
+                    <td>{{pkm.defense}}</td>
+                </tr>
+                <tr>
+                    <td>special attack</td>
+                    <td>{{pkm.special_attack}}</td>
+                </tr>
+                <tr>
+                    <td>special defense</td>
+                    <td>{{pkm.special_defense}}</td>
+                </tr>
+                <tr>
+                    <td>speed</td>
+                    <td>{{pkm.speed}}</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
 
-            <tr>
-                <th>statistic</th>
-                <th>value</th>
-            </tr>
+    </div>
 
-        <tbody>
+    <div class="table-container">
 
-            <tr>
-                <td>hp</td>
-                <td>{{pkm.hp}}</td>
-            </tr>
-            <tr>
-                <td>attack</td>
-                <td>{{pkm.attack}}</td>        
-            </tr>
-            <tr>
-                <td>defense</td>
-                <td>{{pkm.defense}}</td>
-            </tr>
-            <tr>
-                <td>special attack</td>
-                <td>{{pkm.special_attack}}</td>
-            </tr>
-            <tr>
-                <td>special defense</td>
-                <td>{{pkm.special_defense}}</td>
-            </tr>
-            <tr>
-                <td>speed</td>
-                <td>{{pkm.speed}}</td>
-            </tr>
-        </tbody>
-        </thead>
-    </table>
+        <table>
+            <thead>
+    
+                <caption>physical attributes</caption>
+    
+                <tr>
+                    <th>statistic</th>
+                    <th>value</th>
+                </tr>
+    
+            <tbody>
+    
+                <tr>
+                    <td>height</td>
+                    <td>{{pkm.height}}</td>
+                </tr>
+                <tr>
+                    <td>weight</td>
+                    <td>{{pkm.weight}}</td>        
+                </tr>
+            </tbody>
+            </thead>
+        </table>
 
-    <table>
-        <thead>
+    </div>
+    
+    <div class="table-container">
 
-            <caption>physical attributes</caption>
+        <table>
+            <thead>
+    
+                <caption>Abilities</caption>
+    
+                <tr>
+                    <th>Ability</th>
+                </tr>
+    
+            <tbody>
+    
+            {% for ability in pkm.abilities.all %}
+                <tr>
+                    <td>{{ability.name}}</td>
+                </tr>    
+            {% endfor %}
+    
+    
+            </tbody>
+            </thead>
+        </table>
 
-            <tr>
-                <th>statistic</th>
-                <th>value</th>
-            </tr>
-
-        <tbody>
-
-            <tr>
-                <td>height</td>
-                <td>{{pkm.height}}</td>
-            </tr>
-            <tr>
-                <td>weight</td>
-                <td>{{pkm.weight}}</td>        
-            </tr>
-        </tbody>
-        </thead>
-    </table>
-
-    <table>
-        <thead>
-
-            <caption>Abilities</caption>
-
-            <tr>
-                <th>Ability</th>
-            </tr>
-
-        <tbody>
-
-        {% for ability in pkm.abilities.all %}
-            <tr>
-                <td>{{ability.name}}</td>
-            </tr>    
-        {% endfor %}
-
-
-        </tbody>
-        </thead>
-    </table>
+    </div>
 
 </div>

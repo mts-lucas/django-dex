@@ -410,6 +410,7 @@ h6 {
     border-top-right-radius: 40rem;
     border-bottom-left-radius: 15rem;
     border-bottom-right-radius: 15rem;
+    /* filter: brightness(1.5); */
 }
 
 .main-content-container .main-picture-container .left-container {
