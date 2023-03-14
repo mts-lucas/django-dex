@@ -1,21 +1,23 @@
-<div class="container {{pkm.color_type}}">
+<div class="container {{pkm.color_type}} main-picture-container">
 
-    <div class="number-container container">
+    <div class="left-container container container">
 
-        <p class="number">{{ pkm.number|stringformat:"03d" }}</p>
-        <a href="{% url 'pokemons:generation' pkm.generation %}" class="gen">{{ pkm.generation }}</a>
+        <div class="number-container container">
 
-        </ol>
+            <p class="number">{{ pkm.number|stringformat:"03d" }}</p>
+            <a href="{% url 'pokemons:generation' pkm.generation %}" class="gen">{{ pkm.generation }}</a>
+    
+        </div>
+    
+        <div class="name-container container">
+    
+            <p class="name">{{ pkm.name }}</p>
+    
+        </div>
+    </div> 
 
-    </div>
 
-    <div class="name-container container">
-
-        <p>{{ pkm.name }}</p>
-
-    </div>
-
-    <div class="container picture-container">
+    <div class="container picture-container right-container">
 
         <img src="{{pkm.picture}}" alt="{{ pkm.name }}">
         <ol class="types">

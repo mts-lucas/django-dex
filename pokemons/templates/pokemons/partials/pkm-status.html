@@ -64,4 +64,26 @@
         </thead>
     </table>
 
+    <table>
+        <thead>
+
+            <caption>Abilities</caption>
+
+            <tr>
+                <th>Ability</th>
+            </tr>
+
+        <tbody>
+
+        {% for ability in pkm.abilities.all %}
+            <tr>
+                <td>{{ability.name}}</td>
+            </tr>    
+        {% endfor %}
+
+
+        </tbody>
+        </thead>
+    </table>
+
 </div>
