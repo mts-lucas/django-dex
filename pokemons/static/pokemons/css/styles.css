@@ -404,8 +404,12 @@ h6 {
     display: flex;
     flex-direction: row;
     padding: 0;
-    border-radius: 5rem;
+    /* border-radius: 5rem; */
     margin: 1rem;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 40rem;
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 15rem;
 }
 
 .main-content-container .main-picture-container .left-container {
@@ -417,6 +421,7 @@ h6 {
     flex-direction: column;
     align-content: space-between;
     justify-content: start;
+    z-index: 1;
 }
 
 .main-content-container .main-picture-container .left-container .number-container {
@@ -431,20 +436,22 @@ h6 {
 .main-content-container .main-picture-container .left-container .number-container .number{
 
     font-size: 6rem;
-    color: var(--color-white);
+    color: var(--color-gray-6);
     font-weight: bolder;
     font-family: var(--font-primary);
     margin-left: 0;
+    margin-bottom: 0;
 }
 
 .main-content-container .main-picture-container .left-container .number-container .gen{
 
-    font-size: 1.3rem;
-    color: var(--color-white);
+    font-size: 1.5rem;
+    color: var(--color-gray-5);
     text-decoration: none;
     font-weight: bolder;
     font-family: var(--font-primary);
     margin-left: 0;
+    margin-top: 0;
 }
 
 .main-content-container .main-picture-container .left-container .name-container{
@@ -489,6 +496,8 @@ h6 {
     flex-direction: row;
     justify-content: space-around;
     list-style: none;
+    padding-left: 8rem;
+    padding-right: 8rem;
 
 }
 
@@ -496,12 +505,12 @@ h6 {
 .main-content-container .main-picture-container .right-container .types .typein {
     
     font-size: 3rem;
-    
     font-weight: bolder;
     font-family: var(--font-primary);
     border: .3rem solid var(--color-white);
     padding: 1rem;
     border-radius: 1.5rem;
+    margin: auto;
 
 }
 
