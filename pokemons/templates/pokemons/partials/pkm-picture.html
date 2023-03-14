@@ -2,12 +2,16 @@
 
     <div class="left-container container container">
 
-        <div class="number-container container">
+        <div class="number-cont">
+            <div class="number-container container">
 
-            <p class="number">{{ pkm.number|stringformat:"03d" }}</p>
-            <a href="{% url 'pokemons:generation' pkm.generation %}" class="gen">{{ pkm.generation }}</a>
-    
+                <p class="number">{{ pkm.number|stringformat:"03d" }}</p>
+                <a href="{% url 'pokemons:generation' pkm.generation %}" class="gen">{{ pkm.generation }}</a>
+        
+            </div>
+
         </div>
+
     
         <div class="name-container container">
     
@@ -19,12 +23,12 @@
 
     <div class="container picture-container right-container">
 
-        <img src="{{pkm.picture}}" alt="{{ pkm.name }}">
+        <img class="pkm-imagem" src="{{pkm.picture}}" alt="{{ pkm.name }}">
         <ol class="types">
 
             {% for tipo in pkm.pkm_types.all %}
 
-                <li class="type {{tipo}}">
+                <li class="typein {{tipo}}">
                     <a href="{% url 'pokemons:tipo' tipo %}">{{tipo}}</a>
                 </li>
             

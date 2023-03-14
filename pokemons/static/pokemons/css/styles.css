@@ -404,6 +404,8 @@ h6 {
     display: flex;
     flex-direction: row;
     padding: 0;
+    border-radius: 5rem;
+    margin: 1rem;
 }
 
 .main-content-container .main-picture-container .left-container {
@@ -459,3 +461,56 @@ h6 {
     font-weight: bolder;
     font-family: var(--font-primary);
 }
+
+.main-content-container .main-picture-container .right-container {
+
+
+    padding-top: 5rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-left: auto;
+}
+
+
+.main-content-container .main-picture-container .right-container .pkm-imagem{
+
+
+    height: 90%;
+    width: 90%;
+
+}
+
+.main-content-container .main-picture-container .right-container .types{
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+
+}
+
+
+.main-content-container .main-picture-container .right-container .types .typein {
+    
+    font-size: 3rem;
+    
+    font-weight: bolder;
+    font-family: var(--font-primary);
+    border: .3rem solid var(--color-white);
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+}
+
+
+.main-content-container .main-picture-container .right-container .types .typein a{
+
+    text-decoration: none;
+    color: var(--color-white);
+
+}
+
+
