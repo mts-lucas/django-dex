@@ -9,3 +9,20 @@
 
 {% endblock content %}
 
+{% block buttons %}
+
+    <div class="but-page">
+
+        {% if pkm.number >= 2 %}
+            <a href="{% url 'pokemons:pokemon' pkm.number|add:"-1" %}">Previus Pokemon</a>
+        {% endif %}
+
+        {% if pkm.number <= 808 %}
+            <a href="{% url 'pokemons:pokemon' pkm.number|add:"1" %}">Next Pokemon</a>
+        {% endif %}
+
+    </div>
+
+
+{% endblock buttons %}
+

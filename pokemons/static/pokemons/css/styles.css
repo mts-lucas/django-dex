@@ -335,6 +335,7 @@ h6 {
 .pokemon .detail .identify .name{
 
     color: white;
+    font-weight: bolder;
     text-transform: capitalize;
     text-align: start;
     padding-right: 2rem;
