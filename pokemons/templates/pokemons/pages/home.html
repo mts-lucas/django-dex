@@ -14,3 +14,15 @@
     </ol>
 
 {% endblock content %}
+
+{% block buttons %}
+
+    {% if pokemonItens.has_previous %}
+        <a href="?pagina={{ pokemonItens.previous_page_number }}">Previus Page</a>
+    {% endif %}
+
+    {% if pokemonItens.has_next %}
+        <a href="?pagina={{ pokemonItens.next_page_number }}">Next Page</a>
+    {% endif %}
+
+{% endblock buttons %}

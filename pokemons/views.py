@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import get_list_or_404, get_object_or_404, render
 
 from .models import Pokemon
@@ -7,7 +8,10 @@ from .models import Pokemon
 
 def home(request):
 
-    pkmList = Pokemon.objects.filter(number__lte=150).order_by('number')
+    lis_all = Pokemon.objects.all()
+    paginator = Paginator(lis_all, 20)
+    pagina = request.GET.get('pagina')
+    pkmList = paginator.get_page(pagina)
 
     return render(request, 'pokemons/pages/home.html', context={
 
