@@ -142,7 +142,7 @@ h6 {
 
 .search-form {
 
-    border: .2rem solid var(--color-primary-dark);
+    border: .2rem solid var(--color-primary-blue);
     max-width: 64rem;
     margin: 0 auto;
     border-radius: .4rem;
@@ -166,6 +166,7 @@ h6 {
     position: absolute;
     top: 0;
     right: 0;
+    color: var(--color-primary-blue);
 }
 
 
@@ -177,19 +178,19 @@ h6 {
 
 .search-button:focus {
 
-    outline: 1px solid var(--color-primary);
+    outline: 1px solid var(--color-primary-blue);
     background: rgba(0, 0, 0, .2);
 }
 
 .search-form:focus-within {
 
-    border-color: var(--color-primary);
+    border-color: var(--color-primary-blue);
     background: var(--color-white);
 }
 
 .search-form:focus-within .search-button {
 
-    color: var(--color-primary);
+    color: var(--color-primary-blue);
 }
 
 .container {
@@ -237,6 +238,7 @@ h6 {
     background: var(--color-white);
     border-radius: 5rem;
     padding: 1rem;
+    box-shadow: -5px 5px 30px rgba(0, 0, 0, .5);
     
 }
 
@@ -250,10 +252,12 @@ h6 {
 
 .pokemons {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1px;
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-items: center;
+    
 }
 
 @media screen and (min-width: 380px) {
@@ -410,11 +414,12 @@ h6 {
     flex-direction: row;
     padding: 0;
     /* border-radius: 5rem; */
-    margin: 1rem;
+    margin: 1.5rem 1.5rem 3rem 1.5rem;
     border-top-left-radius: 100%;
     border-top-right-radius: 40rem;
     border-bottom-left-radius: 15rem;
     border-bottom-right-radius: 15rem;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, .6);
     /* filter: brightness(1.5); */
 }
 
@@ -535,7 +540,8 @@ h6 {
     justify-items: space-between;
     background-color:rgba(92, 168, 212, 0.205);
     border-radius: 5rem;
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 3rem 1.5rem;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .5);
 
 
 }
@@ -586,7 +592,8 @@ h6 {
 
     background-color: var(--color-gray-8);
     border-radius: 5rem;
-    margin: 1.5rem;
+    margin: 1.5rem 1.5rem 3rem 1.5rem;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .5);
 }
 
 .evo-container .titulo p{
@@ -633,5 +640,31 @@ h6 {
     font-family: var(--font-primary);
     font-weight: bolder;
     text-align: center;
+
+}
+
+.but-page{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin: 2rem;
+
+}
+
+.but-page a{
+
+    color: white;
+    background-color: var(--color-primary-blue);
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 1rem;
+    border-radius: 2.5rem;
+    border: .2rem solid var(--color-white);
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .5);
+    /* margin-right: 1rem; */
 
 }
